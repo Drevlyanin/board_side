@@ -1,17 +1,17 @@
-< ! DOC:TYPE html>
+<!DOCTYPE html>
 <html>
     <head>
-	    <meta charset="UTF-8">
-        <titlе>Главная :: Доска объявлений</titlе>
-	</head>
-	<body>
-	    <hl>Объявления</hl>
-		{% for ЬЬ in bbs %)
-		<div>
-		    <h2 > {{ bb . title ) } </h2>
-            <р> { { bb . content ) } < /р>
-            <р> { { ЬЬ . puЬl ished 1 date : "d .m. У Н: i: s" ) ) </р>
-		</div>
-		{% endfor %)
-	< /body> 
+        <meta charset="UTF-8">
+        <title>Главная :: Доска объявлений</title>
+    </head>
+    <body>
+        <h1>Объявления</h1>
+        {% for bb in bbs %}
+        <div>
+            <h2>{{ bb.title }}</h2>
+            <p>{{ bb.content }}</p>
+            <p>{{ bb.published|date:"d.m. У H:i:s" }}</p>
+        </div>
+        {% endfor %}
+    </body>
 </html>
